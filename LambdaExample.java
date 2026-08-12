@@ -33,14 +33,14 @@ public class LambdaExample {
         banner("Listing users with age > 5 sorted by name");
         // TODO With functional interfaces declared  >>> Done
 
-        Predicate<User>p1= new Predicate<User>(){
+        Predicate<User>p1 = new Predicate<User>(){
 
             @Override
             public boolean test(User t) {
                 return t.age>5;
             
         }};
-        Comparator<User> c1= new Comparator<User>() {
+        Comparator<User> c1 = new Comparator<User>() {
 
             @Override
             public int compare(User o1, User o2) {
@@ -60,7 +60,7 @@ public class LambdaExample {
         banner("Listing users with age < 10 sorted by age");
         // TODO With functional interfaces declared  >>> Done
 
-        Predicate<User>p2= new Predicate<User>() {
+        Predicate<User>p2 = new Predicate<User>() {
 
             @Override
             public boolean test(User t) {
@@ -68,7 +68,7 @@ public class LambdaExample {
             }
 
         };
-        Comparator<User>c2= new Comparator<User>() {
+        Comparator<User>c2 = new Comparator<User>() {
             @Override
             public int compare(User u1, User u2){
                 return Integer.compare(u1.age,u2.age);
@@ -87,14 +87,14 @@ public class LambdaExample {
 
         banner("Listing active users sorted by name");
         // TODO With functional interfaces declared  >>> Done
-        Predicate<User>p3= new Predicate<User>() {
+        Predicate<User>p3 = new Predicate<User>() {
             @Override
             public boolean test(User u){
                 return u.active;
 
             }
         };
-        Comparator<User>c3= new Comparator<User>() {
+        Comparator<User> c3 = new Comparator<User>() {
             @Override 
             public int compare(User u1, User u2){
                 return u1.name.compareTo(u2.name);
@@ -110,13 +110,13 @@ public class LambdaExample {
         banner("Listing active users with age > 8 sorted by name");
         // TODO With functional interfaces declared   >>> Done
 
-        Predicate<User>p4 = new Predicate<User>() {
+        Predicate<User> p4 = new Predicate<User>() {
             @Override
             public boolean test (User u){
                 return u.active&&u.age>8;
             }
         };
-        Comparator<User>c4= new Comparator<User>() {
+        Comparator<User> c4 = new Comparator<User>() {
             @Override
             public int compare(User u1, User u2){
                 return u1.name.compareTo(u2.name);

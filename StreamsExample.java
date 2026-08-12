@@ -52,7 +52,7 @@ public class StreamsExample {
 
         banner("Active books for all authors");
         // TODO With functional interfaces declared  >>> Done
-        Function<Author, Stream<Book>>booksStream=new Function<Author,Stream<Book>>() {
+        Function<Author, Stream<Book>>booksStream = new Function<Author,Stream<Book>>() {
 
             @Override
             public Stream<Book> apply(Author t) {
@@ -60,7 +60,7 @@ public class StreamsExample {
             }
             
         };
-        Consumer<Book> booksPrinter= new Consumer<Book>() {
+        Consumer<Book> booksPrinter = new Consumer<Book>() {
             @Override
             public void accept(Book b){
                 System.out.println(b);
@@ -84,7 +84,7 @@ public class StreamsExample {
         banner("Average price for all books in the library");
         // TODO With functional interfaces declared  >>> Done
 
-        ToIntFunction<Book> bookToPrice= new ToIntFunction<Book>() {
+        ToIntFunction<Book> bookToPrice = new ToIntFunction<Book>() {
 
             @Override
             public int applyAsInt(Book value) {
@@ -106,7 +106,7 @@ public class StreamsExample {
 
         banner("Active authors that have at least one published book");
         // TODO With functional interfaces declared  >>> Done
-        Predicate<Author> PublishedMatch= new Predicate<Author>() {
+        Predicate<Author> PublishedMatch = new Predicate<Author>() {
 
             @Override
             public boolean test(Author t) {
